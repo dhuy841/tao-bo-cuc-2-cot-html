@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+}
+
+.left-column {
+    float: left;
+    width: 60%;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.right-column {
+    float: right;
+    width: 38%;
+    padding: 20px;
+    background-color: lightgreen;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .left-column,
+    .right-column {
+        float: none;
+        width: 100%;
+    }
+
+    .right-column {
+        margin-top: 16px;
+    }
+}
